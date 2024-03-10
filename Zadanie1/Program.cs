@@ -8,5 +8,9 @@ public class main
         Console.WriteLine("Hello World2");
         Console.WriteLine("Hello World3");
 
+        Console.WriteLine("Hello World");
+        Console.WriteLine("Hello World2");
+        Console.WriteLine("Hello World3");
+
     }
 }
