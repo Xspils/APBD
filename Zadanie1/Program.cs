@@ -4,13 +4,22 @@ public class main
 {
     public static void Main(string[] args)
     {
-        Console.WriteLine("Hello World");
-        Console.WriteLine("Hello World2");
-        Console.WriteLine("Hello World3");
+        int[] exampleArray = { 1, 3, 5, 7, 9 };
+        double average = CalculateAverage(exampleArray);
+        Console.WriteLine($"Średnia wartość to: {average}");
+    }
+    public static double CalculateAverage(int[] numbers)
+    {
+        if (numbers == null || numbers.Length == 0)
+        {
+            throw new ArgumentException("Tablica nie może być pusta");
+        }
 
-        Console.WriteLine("Hello World");
-        Console.WriteLine("Hello World2");
-        Console.WriteLine("Hello World3");
-
+        double sum = 0;
+        foreach (int number in numbers)
+        {
+            sum += number;
+        }
+        return sum / numbers.Length;
     }
 }
